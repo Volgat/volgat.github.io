@@ -78,6 +78,23 @@
             color: var(--primary-color);
             font-weight: bold;
         }
+        .language-selector {
+            float: right;
+            margin-top: 10px;
+            margin-right: 20px;
+        }
+        .language-selector select {
+            background: var(--section-bg);
+            color: var(--text-color);
+            border: 1px solid var(--primary-color);
+            padding: 5px;
+            font-family: 'Fira Code', monospace;
+            cursor: pointer;
+        }
+        .language-selector select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
         #showcase {
             min-height: 400px;
             text-align: center;
@@ -208,13 +225,17 @@
         @media(max-width: 768px) {
             header #branding,
             header nav,
-            header nav li {
+            header nav li,
+            .language-selector {
                 float: none;
                 text-align: center;
                 width: 100%;
             }
             header {
                 padding-bottom: 20px;
+            }
+            .language-selector {
+                margin: 10px 0;
             }
         }
     </style>
@@ -227,14 +248,20 @@
             </div>
             <nav>
                 <ul>
-                    <li class="current"><a href="#home">Home</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#references">References</a></li>
+                    <li class="current"><a href="#home" data-en="Home" data-fr="Accueil">Home</a></li>
+                    <li><a href="#experience" data-en="Experience" data-fr="Expérience">Experience</a></li>
+                    <li><a href="#skills" data-en="Skills" data-fr="Compétences">Skills</a></li>
+                    <li><a href="#projects" data-en="Projects" data-fr="Projets">Projects</a></li>
+                    <li><a href="#education" data-en="Education" data-fr="Éducation">Education</a></li>
+                    <li><a href="#references" data-en="References" data-fr="Références">References</a></li>
                 </ul>
             </nav>
+            <div class="language-selector">
+                <select id="language-switcher">
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                </select>
+            </div>
         </div>
     </header>
     <section id="showcase">
@@ -242,264 +269,11 @@
             <div id="code-content"></div>
         </div>
         <div class="container">
-            <h1>&lt;Full Stack Developer & AI/ML Specialist&gt;</h1>
-            <p>Passionate about building scalable web applications and AI-powered systems</p>
+            <h1 data-en="&lt;Full Stack Developer & AI/ML Specialist&gt;" data-fr="&lt;Développeur Full Stack & Spécialiste en IA/ML&gt;">&lt;Full Stack Developer & AI/ML Specialist&gt;</h1>
+            <p data-en="Passionate about building scalable web applications and AI-powered systems" data-fr="Passionné par la création d'applications web évolutives et de systèmes alimentés par l'IA">Passionate about building scalable web applications and AI-powered systems</p>
             <div class="links">
                 <a href="https://linkedin.com/in/mike-amega-486329184" target="_blank">LinkedIn: linkedin.com/in/mike-amega-486329184</a>
                 <a href="https://github.com/Volgat" target="_blank">GitHub: github.com/Volgat</a>
-                <a href="https://www.smartmoneybot.pw" target="_blank">SmartMoneyBot Demo</a>
-                <a href="https://play.google.com/store/apps/details?id=com.smartmoneybot.app" target="_blank">SmartMoneyBot App (Play Store)</a>
-                <a href="https://amegamestudio.com" target="_blank">ColorFlow Infinity Web App</a>
-                <a href="https://play.google.com/store/apps/details?id=com.colorflow.infinity" target="_blank">ColorFlow Infinity Mobile App (Play Store)</a>
-                <a href="https://www.pixelpros.pro" target="_blank">PixelPros.pro</a>
-                <a href="https://www.placedupartage.org" target="_blank">Place du Partage</a>
-            </div>
-        </div>
-    </section>
-    <section id="main">
-        <div class="container">
-            <section id="experience" class="section">
-                <h2>// Professional Experience</h2>
-                <div class="job">
-                    <h3>AI & Data Science Consultant | SBG Silver Birch Growth</h3>
-                    <p>Toronto, Ontario, Canada (May 2024 - July 2025)</p>
-                    <ul>
-                        <li>Led development of MVP B2B Intelligence Web Application</li>
-                        <li>Designed AI-powered dashboards with real-time analytics and scoring engines</li>
-                        <li>Integrated GPT and data pipelines for automated outreach systems</li>
-                        <li>Collaborated with cross-functional teams using Agile methodologies</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <h3>Lead Developer | Place du Partage</h3>
-                    <p>Windsor, Ontario, Canada (2024)</p>
-                    <ul>
-                        <li>Led development and maintenance of the official website for Place du Partage NGO</li>
-                        <li>Managed and updated IT systems to ensure operational efficiency</li>
-                        <li>Designed, developed, and deployed responsive web applications</li>
-                        <li>Project: <a href="https://www.placedupartage.org" target="_blank" class="project-link">placedupartage.org</a></li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <h3>Full-Stack Developer | Various Clients</h3>
-                    <p>Windsor, Ontario, Canada (2021 - Present)</p>
-                    <ul>
-                        <li>Developed enterprise web applications using modern JavaScript frameworks</li>
-                        <li>Built secure fintech applications with optimized database architecture</li>
-                        <li>Managed cloud infrastructure across AWS, Azure, and Google Cloud platforms</li>
-                        <li>Collaborated with cross-functional teams using Agile methodologies and Git workflows</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <h3>Embedded Systems Programmer | FAXDRONE</h3>
-                    <p>Lomé, Togo (September 2022 - May 2023)</p>
-                    <ul>
-                        <li>Developed computer vision system for drones using Python and C</li>
-                        <li>Implemented real-time image processing algorithms for navigation</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <h3>Backend Developer | MyPassPartout</h3>
-                    <p>Cameroon (November 2021 – February 2022)</p>
-                    <ul>
-                        <li>Supported development of a secure online banking application</li>
-                        <li>Created SQL scripts to maintain database integrity and performance</li>
-                        <li>Collaborated with front-end developers to ensure seamless integration</li>
-                        <li>Optimized existing codebase and integrated third-party APIs</li>
-                        <li>Managed source control repositories and deployed software updates</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <h3>Web Developer | Empower Handicap NGO</h3>
-                    <p>Togo (September 2022 - April 2023)</p>
-                    <ul>
-                        <li>Built responsive and accessible landing page using JavaScript, PHP, and Bootstrap</li>
-                        <li>Project: <a href="https://empowerhandicap.org/" target="_blank" class="project-link">empowerhandicap.org</a></li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <h3>Freelance Web Developer</h3>
-                    <p>Ypsilanti, Michigan, USA</p>
-                    <ul>
-                        <li>Designed and developed e-commerce website using WordPress and WooCommerce</li>
-                        <li>Tested cross-browser compatibility for websites/applications</li>
-                        <li>Project: <a href="https://afrobeautystars.com" target="_blank" class="project-link">afrobeautystars.com</a></li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <h3>Online Learning Platform Developer | Studly</h3>
-                    <p>Virtual (August 2024 - Present)</p>
-                    <ul>
-                        <li>Developing a full-stack educational platform using React.js and Node.js</li>
-                        <li>Designing and implementing scalable platform architecture</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <h3>Machine Learning Developer for Finance | AI Financial Insights</h3>
-                    <p>August 2024 - Present</p>
-                    <ul>
-                        <li>Developing ML models for financial analysis using Python and TensorFlow</li>
-                        <li>Creating automated trading systems using MQL5 and Python</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <h3>Independent Game Developer | Volgat Game Studio</h3>
-                    <p>Present</p>
-                    <ul>
-                        <li>Developed multiple games using Unity3D and C#</li>
-                    </ul>
-                </div>
-            </section>
-            <section id="skills" class="section">
-                <h2>// Technical Skills</h2>
-                <h3>Backend Development</h3>
-                <div class="skills-list">
-                    <div class="skill-item"><i class="fab fa-cuttlefish"></i> C#</div>
-                    <div class="skill-item"><i class="fab fa-js"></i> JavaScript</div>
-                    <div class="skill-item"><i class="fab fa-python"></i> Python</div>
-                    <div class="skill-item"><i class="fab fa-php"></i> PHP</div>
-                    <div class="skill-item"><i class="fas fa-chart-line"></i> MQL5</div>
-                    <div class="skill-item"><i class="fas fa-database"></i> SQL Server</div>
-                    <div class="skill-item"><i class="fas fa-database"></i> PostgreSQL</div>
-                    <div class="skill-item"><i class="fas fa-database"></i> MySQL</div>
-                    <div class="skill-item"><i class="fas fa-database"></i> MongoDB</div>
-                    <div class="skill-item"><i class="fas fa-code"></i> REST APIs</div>
-                    <div class="skill-item"><i class="fas fa-code"></i> GraphQL</div>
-                    <div class="skill-item"><i class="fas fa-code"></i> WebSocket</div>
-                </div>
-                <h3>Frontend Development</h3>
-                <div class="skills-list">
-                    <div class="skill-item"><i class="fab fa-react"></i> React.js</div>
-                    <div class="skill-item"><i class="fab fa-angular"></i> Angular</div>
-                    <div class="skill-item"><i class="fab fa-vuejs"></i> Vue.js</div>
-                    <div class="skill-item"><i class="fab fa-html5"></i> HTML5</div>
-                    <div class="skill-item"><i class="fab fa-css3"></i> CSS3</div>
-                    <div class="skill-item"><i class="fas fa-code"></i> JavaScript ES6+</div>
-                    <div class="skill-item"><i class="fas fa-code"></i> TypeScript</div>
-                    <div class="skill-item"><i class="fas fa-paint-brush"></i> Bootstrap</div>
-                    <div class="skill-item"><i class="fas fa-paint-brush"></i> Material-UI</div>
-                    <div class="skill-item"><i class="fas fa-paint-brush"></i> Tailwind CSS</div>
-                </div>
-                <h3>AI & Machine Learning</h3>
-                <div class="skills-list">
-                    <div class="skill-item"><i class="fas fa-brain"></i> TensorFlow</div>
-                    <div class="skill-item"><i class="fas fa-brain"></i> PyTorch</div>
-                    <div class="skill-item"><i class="fas fa-brain"></i> scikit-learn</div>
-                    <li class="skill-item"><i class="fas fa-robot"></i> OpenAI GPT</li>
-                    <li class="skill-item"><i class="fas fa-robot"></i> Google Gemini</li>
-                    <li class="skill-item"><i class="fas fa-camera"></i> Computer Vision</li>
-                </div>
-                <h3>DevOps & Cloud</h3>
-                <div class="skills-list">
-                    <div class="skill-item"><i class="fab fa-docker"></i> Docker</div>
-                    <div class="skill-item"><i class="fab fa-git-alt"></i> Git</div>
-                    <div class="skill-item"><i class="fas fa-tools"></i> CI/CD Pipelines</div>
-                    <div class="skill-item"><i class="fab fa-linux"></i> Linux Administration</div>
-                    <div class="skill-item"><i class="fab fa-aws"></i> AWS</div>
-                    <div class="skill-item"><i class="fab fa-microsoft"></i> Azure</div>
-                    <div class="skill-item"><i class="fab fa-google"></i> Google Cloud</div>
-                </div>
-            </section>
-            <section id="projects" class="section">
-                <h2>// Key Projects</h2>
-                <h3>Professional Projects</h3>
-                <ul>
-                    <li>SmartMoneyBot - AI Trading Platform (2024 - Present): <a href="https://www.smartmoneybot.pw" target="_blank" class="project-link">smartmoneybot.pw</a> | <a href="https://play.google.com/store/apps/details?id=com.smartmoneybot.app" target="_blank" class="project-link">Play Store</a>
-                        <ul>
-                            <li>Developed comprehensive AI-powered trading system with real-time market analysis</li>
-                            <li>Built scalable backend architecture handling thousands of concurrent users</li>
-                            <li>Integrated machine learning models for predictive market analytics</li>
-                            <li>Technologies: Python, TensorFlow, React.js, React Native, WebSocket APIs, Cloud deployment</li>
-                        </ul>
-                    </li>
-                    <li>ColorFlow Infinity - AI-Powered Web & Mobile Puzzle Game (2024 - Present): <a href="https://amegamestudio.com" target="_blank" class="project-link">Web App</a> | <a href="https://play.google.com/store/apps/details?id=com.colorflow.infinity" target="_blank" class="project-link">Play Store</a>
-                        <ul>
-                            <li>Developed real-time web and mobile puzzle game with AI-generated content using Gemini API</li>
-                            <li>Implemented blockchain payment integration and secure transaction processing</li>
-                            <li>Built adaptive algorithms for personalized user experience</li>
-                            <li>Technologies: React.js, React Native, JavaScript, AI APIs, WebSocket communication</li>
-                        </ul>
-                    </li>
-                    <li>SBG B2B Intent Intelligence Platform (May 2024 - July 2025)
-                        <ul>
-                            <li>Architected AI-powered lead scoring engine with real-time intent signals</li>
-                            <li>Designed scalable data pipelines for processing millions of data points</li>
-                            <li>Integrated GPT models for automated outreach and analytics dashboards</li>
-                            <li>Technologies: Python, React.js, GPT API, Data visualization, Cloud infrastructure</li>
-                        </ul>
-                    </li>
-                    <li>LeadGen Web - AI Data Aggregation Prototype (2024): <a href="https://leadgen-web-m4vpqud0t-volgats-projects.vercel.app/" target="_blank" class="project-link">Prototype on Vercel</a>
-                        <ul>
-                            <li>Developed prototype for AI-driven data aggregation and analysis for SBG Silver Birch Growth</li>
-                            <li>Deployed on Vercel for rapid testing and iteration</li>
-                            <li>Technologies: React.js, Node.js, AI models, Vercel</li>
-                        </ul>
-                    </li>
-                    <li>PixelPros.pro - Image Converter & AI Icon Generator (2024 - Present): <a href="https://www.pixelpros.pro" target="_blank" class="project-link">pixelpros.pro</a>
-                        <ul>
-                            <li>Web app for converting/resizing images in all formats (JPEG, PNG, SVG, etc.)</li>
-                            <li>AI-powered icon generation for iOS/Android app stores</li>
-                            <li>Technologies: React.js, Node.js, AI models, Cloud hosting</li>
-                        </ul>
-                    </li>
-                    <li>Place du Partage - NGO Website (2024): <a href="https://www.placedupartage.org" target="_blank" class="project-link">placedupartage.org</a>
-                        <ul>
-                            <li>Led development and maintenance of responsive website for Place du Partage NGO</li>
-                            <li>Technologies: JavaScript, PHP, Bootstrap</li>
-                        </ul>
-                    </li>
-                    <li>Empower Handicap NGO Website: <a href="https://empowerhandicap.org/" target="_blank" class="project-link">empowerhandicap.org</a>
-                        <ul>
-                            <li>Built responsive and accessible landing page using JavaScript, PHP, and Bootstrap</li>
-                        </ul>
-                    </li>
-                    <li>Afro Beauty Stars Website: <a href="https://afrobeautystars.com" target="_blank" class="project-link">afrobeautystars.com</a>
-                        <ul>
-                            <li>Designed and developed e-commerce website using WordPress and WooCommerce</li>
-                        </ul>
-                    </li>
-                </ul>
-                <h3>Personal Projects</h3>
-                <ul>
-                    <li>3D RPG Game: <a href="https://github.com/Volgat/Sample_RPG.git" target="_blank" class="project-link">github.com/Volgat/Sample_RPG</a>
-                        <ul>
-                            <li>Developed using Unity3D and C#</li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
-            <section id="education" class="section">
-                <h2>// Education & Certifications</h2>
-                <div class="job">
-                    <h3>Bachelor's Degree in Theoretical Physics</h3>
-                    <p>University of Lomé</p>
-                    <ul>
-                        <li>Strong foundation in mathematics, algorithms, and problem-solving</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <h3>Professional Certifications</h3>
-                    <ul>
-                        <li>Google Cybersecurity Certificate - Advanced security practices</li>
-                        <li>Computer Vision and AI Certificate - Udemy (Machine Learning specialization)</li>
-                        <li>Technical Diploma - Electronic Programming & Computer Science</li>
-                    </ul>
-                </div>
-            </section>
-            <section id="references" class="section">
-                <h2>// References</h2>
-                <div class="job">
-                    <h3>Anto Masiya | Director, Place du Partage</h3>
-                    <p>📧 amasiya@yahoo.fr | 📱 226-758-6290</p>
-                    <ul>
-                        <li>Relationship: Technical Consultant & Lead Web Developer</li>
-                    </ul>
-                </div>
-            </section>
-        </div>
-    </section>
-    <footer>
-        <p>Mike Amega &copy; 2025</p>
-    </footer>
-</body>
-</html>
+                <a href="https://www.smartmoneybot.pw" target="_blank" data-en="SmartMoneyBot Demo" data-fr="Démo SmartMoneyBot">SmartMoneyBot Demo</a>
+                <a href="https://play.google.com/store/apps/details?id=com.smartmoneybot.app" target="_blank" data-en="SmartMoneyBot App (Play Store)" data-fr="Application SmartMoneyBot (Play Store)">SmartMoneyBot App (Play Store)</a>
+                <a href="https://amegamestudio.com" target="_blank" data-en="ColorFlow Infinity Web App" data
